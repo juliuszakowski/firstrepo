@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>
+Obliczanie odległości od drabiny i kąta
+</title>
+<script language="JavaScript">
+function drabina_zakowski(d_zak,x_zak)
+{
+d_zakowski=parseFloat(d_zak)
+x_zakowski=parseFloat(x_zak)
+drab_zakowski=Math.sqrt(Math.pow(d_zak,2)+Math.pow(x_zak,2))
+document.getElementsByName('drab')[0].value=drab_zakowski.toFixed(2);
+alert("Długość drabiny="+drab_zakowski.toFixed(2));
+pokaz1.innerHTML="Długość drabiny="+drab_zakowski.toFixed(2)+"<br>";
+}
+function kat_zakowski(d_zak,x_zak)
+{
+d_zak=parseFloat(d_zak)
+x_zak=parseFloat(x_zak)
+tan=d_zak/x_zak
+kat_wynik_zakowski=Math.atan(tan)*180/Math.PI
+document.getElementsByName('kat')[0].value=kat_wynik_zakowski.toFixed(2);
+alert("Alfa="+kat_wynik_zakowski.toFixed(2));
+pokaz2.innerHTML="Alfa="+kat_wynik_zakowski.toFixed(2);
+}
+</script>
+</head>
+<body>
+Obliczanie odległości od drabiny i kąta
+<br><br>
+<form name="formularz" action="..." onsubmit="drabina_zakowski(this.wysokosc.value,this.odleglosc.value); kat_zakowski(this.wysokosc.value,this.odleglosc.value);return false">
+Podaj d=
+<input size="6" name="wysokosc">
+Podaj x=
+<input size="6" name="odleglosc">
+<br>
+<br>
+<input TYPE="submit" Value="oblicz" >
+<br>
+<br>
+Drabiny=
+<input size="6" name="drab">
+Alfa=
+<input size="6" name="kat">
+</form>
+<table>
+<tr id="pokaz1"></tr>
+<tr id="pokaz2"></tr>
+</table>
+</body>
+</html>

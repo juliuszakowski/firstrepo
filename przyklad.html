@@ -1,0 +1,42 @@
+<!DOCTYPE html> 
+ <head> 
+<title> Użycie fukcji </title> 
+ <meta charset="utf-8"> 
+ </head> 
+<body>
+
+ <div style="color:rgb(245, 124, 124);font-size:48px;">
+ 
+ <script language="JavaScript">
+ 
+ var a=parseFloat(prompt("a=",""));
+ var b=parseFloat(prompt("b=",""));
+ function dodawanie_zak(a, b) {
+ return a + b;
+ }
+ 
+ function odejmowanie_zak(a, b){
+ return a - b;
+  }
+  
+ function mnozenie_zak(a, b){
+ return a * b;
+  }
+  
+ function potegowanie_zak(a, b){
+ return Math.pow(a,b);
+  }
+  
+ function reszta_z_dzielenia_zak(a, b){
+ return a % b;
+  }
+  
+ document.write("dodawanie="+dodawanie_zak(a,b)+"<br>");
+ document.write("odejmowanie="+odejmowanie_zak(a,b)+"<br>");
+ document.write("mnozenie="+mnozenie_zak(a,b)+"<br>");
+ document.write("potegowanie="+potegowanie_zak(a,b)+"<br>");
+ document.write("reszta z dzielenia="+reszta_z_dzielenia_zak(a,b)+"<br>");
+</script>
+</div>
+</body>
+</html>
